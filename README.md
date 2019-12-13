@@ -11,6 +11,8 @@ In this repository we provide *Jupyter Notebooks* to reproduce each figure from 
 # Origin
 This project is based in the paper Deep Image Prior https://arxiv.org/abs/1711.10925 and code from https://github.com/DmitryUlyanov/deep-image-prior
 
+Authors: Bo Chen, Hongpeng Guo, Xinyang Liu, Yufei Ruan and Zhe Yang.
+
 
 # Install
 
