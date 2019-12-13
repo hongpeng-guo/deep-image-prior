@@ -1,5 +1,3 @@
-**Warning!** The optimization may not converge on some GPUs. We've personally experienced issues on Tesla V100 and P40 GPUs. When running the code, make sure you get similar results to the paper first. Easiest to check using text inpainting notebook.  Try to set double precision mode or turn off cudnn. 
-
 # Deep image prior
 
 In this repository we provide *Jupyter Notebooks* to reproduce each figure from the paper:
@@ -10,14 +8,9 @@ In this repository we provide *Jupyter Notebooks* to reproduce each figure from 
 
 > Dmitry Ulyanov, Andrea Vedaldi, Victor Lempitsky
 
+# Origin
+This project is based in the paper Deep Image Prior https://arxiv.org/abs/1711.10925 and code from https://github.com/DmitryUlyanov/deep-image-prior
 
-[[paper]](https://sites.skoltech.ru/app/data/uploads/sites/25/2018/04/deep_image_prior.pdf) [[supmat]](https://box.skoltech.ru/index.php/s/ib52BOoV58ztuPM) [[project page]](https://dmitryulyanov.github.io/deep_image_prior)
-
-![](data/teaser_compiled.jpg)
-
-Here we provide hyperparameters and architectures, that were used to generate the figures. Most of them are far from optimal. Do not hesitate to change them and see the effect.
-
-We will expand this README with a list of hyperparameters and options shortly.
 
 # Install
 
@@ -41,23 +34,6 @@ or create an conda env with all dependencies via environment file
 ```
 conda env create -f environment.yml
 ```
-
-## Docker image
-
-Alternatively, you can use a Docker image that exposes a Jupyter Notebook with all required dependencies. To build this image ensure you have both [docker](https://www.docker.com/) and  [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) installed, then run
-
-```
-nvidia-docker build -t deep-image-prior .
-```
-
-After the build you can start the container as
-
-```
-nvidia-docker run --rm -it --ipc=host -p 8888:8888 deep-image-prior
-```
-
-you will be provided an URL through which you can connect to the Jupyter notebook.
-
 
 # Citation
 ```
